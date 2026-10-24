@@ -1,0 +1,47 @@
+# ==================================================================================================
+# woff2/recipe.yaml
+# ==================================================================================================
+
+context:
+    name: libertinus-woff2
+    version: "7.051"
+
+# ==================================================================================================
+
+package:
+    name: ${{ name }}
+    version: ${{ version }}
+
+# ==================================================================================================
+
+source:
+    url: https://github.com/alerque/libertinus/releases/download/v${{ version }}/Libertinus-${{ version }}.tar.zst
+    sha256: 250677c929d3775a30913643594379af264ac2ef2801035aa1dcbe30b9be23a6
+
+# ==================================================================================================
+
+build:
+    number: 0
+    noarch: generic
+    script:
+        - set -euxo pipefail
+        - mkdir -p "${PREFIX}/share/fonts"
+        - cp -v static/WOFF2/*.woff2 "${PREFIX}/share/fonts/"
+
+# ==================================================================================================
+
+about:
+    homepage: https://github.com/alerque/libertinus
+    summary: The Libertinus font family (static fonts in Web Open Font Format 2.0)
+    license: OFL-1.1
+    license_file:
+        - OFL.txt
+        - AUTHORS.txt
+        - CONTRIBUTORS.txt
+    description: |
+        Static fonts of the Libertinus family in Web Open Font Format 2.0 (WOFF2):
+        Serif (Regular, Italic, Semibold, Semibold Italic, Bold, Bold Italic),
+        Serif Display, Serif Initials, Sans (Regular, Italic, Bold),
+        Mono, Math and Keyboard.
+
+# ==================================================================================================
