@@ -84,18 +84,21 @@ Add the font format you need. Pixi will fetch the recipe from this repository, b
 # OpenType
 pixi add \
     --git https://github.com/snegoviol/libertinus-conda-recipes \
+    --rev 0f3101bdf9b3eb4dfc6c2418990922d6488bef51 \
     --subdirectory otf \
     libertinus-otf
 
 # TrueType
 pixi add \
     --git https://github.com/snegoviol/libertinus-conda-recipes \
+    --rev 0f3101bdf9b3eb4dfc6c2418990922d6488bef51 \
     --subdirectory ttf \
     libertinus-ttf
 
 # WOFF2
 pixi add \
     --git https://github.com/snegoviol/libertinus-conda-recipes \
+    --rev 0f3101bdf9b3eb4dfc6c2418990922d6488bef51 \
     --subdirectory woff2 \
     libertinus-woff2
 ```
